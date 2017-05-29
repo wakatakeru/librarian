@@ -1,0 +1,7 @@
+<table class="table">
+<%= for book <- @books do %>
+  <tr>
+    <td><a href="<%= book_path(@conn, :show, book.id) %>"><%= book.title %></td>
+  </tr>
+<% end %>
+</table>

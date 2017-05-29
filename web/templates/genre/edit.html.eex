@@ -1,0 +1,9 @@
+<h1>ジャンルの編集</h1>
+<%= form_for @changeset, genre_path(@conn, :update, @genre), fn f -> %>
+<p>
+  <%= text_input f, :name, placeholder: "ジャンル名", class: "form-control" %>
+</p>
+<p>
+  <%= submit "更新" %>
+</p>
+<% end %>

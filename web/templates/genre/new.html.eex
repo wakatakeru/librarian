@@ -1,0 +1,9 @@
+<h1>ジャンルの作成</h1>
+<%= form_for @genre, genre_path(@conn, :create), fn f -> %>
+<p>
+  <%= text_input f, :name, placeholder: "ジャンル名", class: "form-control" %>
+</p>
+<p>
+  <%= submit "作成" %>
+</p>
+<% end %>

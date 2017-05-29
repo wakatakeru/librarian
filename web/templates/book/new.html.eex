@@ -1,0 +1,21 @@
+<h1>蔵書の新規登録</h1>
+<%= form_for @book, book_path(@conn, :create), fn f -> %>
+<p>
+  タイトル
+  <%= text_input f, :title, placeholder: "タイトル", class: "form-control" %>
+</p>
+<p>
+  ISBN
+  <%= text_input f, :isbn, placeholder: "ISBN", class: "form-control" %>
+</p>
+<p>
+  蔵書の場所
+  <%= text_input f, :store_loc, placeholder: "タイトル", class: "form-control" %>
+</p>
+<p>
+  <%= select f, :genre_id, @genre %>
+</p>
+<p>
+  <%= submit "登録" %>
+</p>
+<% end %>

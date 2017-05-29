@@ -1,0 +1,7 @@
+<table class="table">
+<%= for genre <- @genres do %>
+  <tr>
+    <td><a href="<%= genre_path(@conn, :show, genre.id) %>"><%= genre.name %></td>
+  </tr>
+<% end %>
+</table>

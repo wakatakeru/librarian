@@ -3,7 +3,7 @@ defmodule Librarian.Book do
 
   schema "books" do
     field :title, :string
-    field :isbn, :integer
+    field :isbn, :string
     field :store_loc, :string
 
     belongs_to :genre, Librarian.Genre, foreign_key: :genre_id
@@ -16,8 +16,8 @@ defmodule Librarian.Book do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:title, :isbn, :store_loc])
-    |> validate_required([:title, :isbn, :store_loc])
+    |> cast(params, [:title, :isbn, :store_loc, :genre_id])
+    |> validate_required([:title, :isbn, :store_loc, :genre_id])
     |> unique_constraint(:isbn)
   end
 end

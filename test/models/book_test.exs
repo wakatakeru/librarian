@@ -3,7 +3,7 @@ defmodule Librarian.BookTest do
 
   alias Librarian.Book
 
-  @valid_attrs %{isbn: 42, store_loc: "some content", title: "some content"}
+  @valid_attrs %{genre_id: 42, isbn: 42, store_loc: "some content", title: "some content"}
   @invalid_attrs %{}
 
   test "changeset with valid attributes" do

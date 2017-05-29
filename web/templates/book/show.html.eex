@@ -1,0 +1,13 @@
+<h1 class="h1"><%= @book.title %></h1>
+<table class="table">
+  <tr>
+    <td>ジャンル</td>
+    <td>ISBN</td>
+    <td>収納場所</td>
+  </tr>
+  <tr>
+    <td><%= @book.genre.name %></td>
+    <td><%= @book.isbn %></td>
+    <td><%= @book.store_loc %></td>
+  </tr>
+</table>

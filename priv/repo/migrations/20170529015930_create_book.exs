@@ -6,6 +6,7 @@ defmodule Librarian.Repo.Migrations.CreateBook do
       add :title, :string
       add :isbn, :integer
       add :store_loc, :string
+      add :genre_id, :integer
 
       timestamps()
     end

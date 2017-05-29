@@ -1,0 +1,6 @@
+<h1 class="h1"><%= @genre.name %></h1>
+<table class="table">
+<%= for book <- @books do %>
+  <td><%= book.title %></td>
+<% end %>
+</table>
